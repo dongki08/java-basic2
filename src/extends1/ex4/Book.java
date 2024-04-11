@@ -2,8 +2,20 @@ package extends1.ex4;
 
 public class Book extends Item{
 
-    public Book(String name, int price, String writer, int isbn) {
+    private String author;
+
+    private int isbn;
+
+    public Book(String name, int price, String author, int isbn) {
         super(name, price);
-        System.out.println("- 저자 : " + writer + " isbn : " + isbn);
+        this.author = author;
+        this.isbn = isbn;
     }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.println("- 저자 : " + author + ", isbn : " + isbn);
+    }
+
 }

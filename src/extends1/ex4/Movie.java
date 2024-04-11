@@ -2,8 +2,19 @@ package extends1.ex4;
 
 public class Movie extends Item{
 
-    public Movie(String name, int price, String a, String b) {
+    private String director;
+
+    private String actor;
+
+    public Movie(String name, int price, String director, String actor) {
         super(name, price);
-        System.out.println("- 감독 : " + a + " 배우 : " + b);
+        this.director = director;
+        this.actor = actor;
+    }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.println("- 감독 : " + director + ", 배우 : " + actor);
     }
 }
