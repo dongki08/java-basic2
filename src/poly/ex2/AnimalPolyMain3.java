@@ -2,6 +2,10 @@ package poly.ex2;
 
 public class AnimalPolyMain3 {
     public static void main(String[] args) {
+
+        Animal a = new Animal();
+        a.sound();
+
         Animal[] animals = {new Dog(), new Cat(), new Caw()};
 
         for (Animal animal : animals) {
