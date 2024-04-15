@@ -5,6 +5,7 @@ public class PayService {
         System.out.println("결제를 시작합니다 : payOption = " + payOption + "amount = " + amount);
         Pay pay  = PayStore.findPay(payOption);
 
+
         boolean result = pay.pay(amount);
 
         if(result) {
